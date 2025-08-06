@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>G‑Bonk • The playful memecoin on Solana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Canvas for the animated starfield background -->
+    <canvas id="backgroundCanvas" aria-hidden="true"></canvas>
+    <!-- Hoofdnavigatie -->
+    <header>
+      <div class="nav-container">
+        <a href="#home" class="logo">
+          <img src="assets/hero-home.webp" alt="G‑Bonk mascot" />
+          <span>G‑Bonk</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+        <nav>
+          <ul id="navList">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#buy">Buy</a></li>
+            <li><a href="#tokenomics">Tokenomics</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="whitepaper.html">Whitepaper</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero / Home sectie -->
+      <section id="home" class="section light">
+        <div class="container hero">
+          <img
+            src="assets/hero-home.webp"
+            alt="Cartoon G‑Bonk dog walking through a futuristic blockchain landscape"
+          />
+          <h1>Welcome to G‑Bonk</h1>
+          <p>
+            The newest memecoin on Solana. Playful, energetic and ready to
+            conquer the galaxy. Follow our mascot as it guides you through
+            the site.
+          </p>
+          <a href="#buy" class="btn-primary">Buy G‑Bonk</a>
+        </div>
+      </section>
+
+      <!-- Buy sectie -->
+      <section id="buy" class="section dark">
+        <div class="container">
+          <h2>Buy G‑Bonk</h2>
+          <p>
+            G‑Bonk is a Solana token. Instead of connecting a wallet, you can
+            follow the current price and trade via external marketplaces.
+            Below you’ll find links to Dexscreener and DexTools where the
+            token is listed.
+          </p>
+          <div class="dex-links">
+            <!--
+              The buttons below point directly to the G‑Bonk token pages on
+              Dexscreener and DexTools. This makes it easier for visitors to view
+              the current price and volume without having to search first.
+            -->
+            <a
+              href="https://dexscreener.com/solana/ajdczxwien2fmtx3gdzea6yx34a6rzhqcczxsa7tqxj4"
+              target="_blank"
+              rel="noopener"
+              class="btn-secondary"
+            >
+              Dexscreener
+            </a>
+            <a
+              href="https://www.dextools.io/app/en/solana/pair-explorer/9JdogNSqdCFazZ6C1Y4vDxEkuNgH6nZrWfR19Kb8Pd44"
+              target="_blank"
+              rel="noopener"
+              class="btn-secondary"
+            >
+              DexTools
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tokenomics sectie -->
+      <section id="tokenomics" class="section light">
+        <div class="container">
+          <h2>Tokenomics</h2>
+          <p>
+            A transparent overview of the economic characteristics of G‑Bonk.
+            These figures come from Solscan and give an impression of our
+            community and market position.
+          </p>
+          <div class="tokenomics">
+            <div class="token-card">
+              <h3>Price</h3>
+              <p>$0,00002094</p>
+            </div>
+            <div class="token-card">
+              <h3>Market Cap</h3>
+              <p>$181 k</p>
+            </div>
+            <div class="token-card">
+              <h3>Supply</h3>
+              <p>± 866 m</p>
+            </div>
+            <div class="token-card">
+              <h3>Holders</h3>
+              <p>360+</p>
+            </div>
+            <div class="token-card">
+              <h3>Decimals</h3>
+              <p>6</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap sectie -->
+      <section id="roadmap" class="section dark">
+        <div class="container">
+          <h2>Roadmap</h2>
+          <img
+            src="assets/hero-roadmap.webp"
+            alt="Abstract illustration of a roadmap"
+            width="1920"
+            height="1080"
+            style="border-radius: var(--border-radius); margin-bottom: 1rem; width: 100%; max-height: 300px; object-fit: cover;"
+          />
+          <div class="roadmap">
+            <div class="roadmap-item">
+              <h4>Q3 2025: Token Launch</h4>
+              <p>Introduction of G‑Bonk on the Solana network and listings on various DEXes.</p>
+            </div>
+            <div class="roadmap-item">
+              <h4>Q4 2025: Staking</h4>
+              <p>Launch of a staking programme allowing holders to earn rewards by locking their tokens.</p>
+            </div>
+            <div class="roadmap-item">
+              <h4>Q1 2026: G‑Bank</h4>
+              <p>Launch of G‑Bank, an exchange platform that uses fees in G‑Bonk.</p>
+            </div>
+            <div class="roadmap-item">
+              <h4>Q2 2026: G‑House</h4>
+              <p>A secret project where G‑Bonk serves as collateral for major real‑estate initiatives.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Whitepaper teaser sectie -->
+      <section class="section light">
+        <div class="container hero">
+          <!--
+            Removed the illustrative image from the whitepaper teaser to prevent
+            it from overlapping the button and subsequent content. The teaser
+            now consists solely of the heading, description and button. If a
+            decorative image is desired in the future, consider using a CSS
+            background-image on this container instead of an <img> element.
+          -->
+          <h2>Read our whitepaper</h2>
+          <p>
+            Want to know more about the philosophy, technology and vision behind G‑Bonk?
+            Download our extensive whitepaper for all details.
+          </p>
+          <a href="whitepaper.html" class="btn-primary">Open whitepaper</a>
+        </div>
+      </section>
+
+      <!-- Contact & social sectie -->
+      <section id="contact" class="section dark">
+        <div class="container">
+          <h2>Contact</h2>
+          <div class="contact-info">
+            <p>Do you have questions or want to talk to our community team? Get in touch via the channels below:</p>
+            <div class="social-links">
+              <a href="https://x.com/GalacticBonk" aria-label="Twitter" target="_blank" rel="noopener">
+                <!-- Twitter icon as UTF‑8 glyph -->
+                🐦
+              </a>
+              <a href="https://t.me/GalacticBonk" aria-label="Telegram" target="_blank" rel="noopener">
+                📢
+              </a>
+              <a href="https://solscan.io/token/AjdCzXwien2FmTx3GDZeA6YX34A6rzhQCCZXSa7tqXJ4" aria-label="Solscan" target="_blank" rel="noopener">
+                🔍
+              </a>
+              <a href="https://www.dextools.io" aria-label="DexTools" target="_blank" rel="noopener">
+                💹
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 G‑Bonk. All rights reserved. This site is created for demonstration purposes.</p>
+    </footer>
+
+    <!-- Mascot assistant -->
+    <img
+      id="mascot"
+      class="mascot"
+      src="assets/mascot-animation.gif"
+      alt="Animated G‑Bonk mascot assistant"
+      aria-hidden="true"
+    />
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

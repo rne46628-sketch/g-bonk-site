@@ -1,0 +1,31 @@
+# Navigation structure for G‑Bonk
+#
+# This YAML describes the layout of the website. The order of the items
+# determines the order in the navigation menu. Each item refers to a
+# section on the landing page or to a separate page.
+
+menu:
+  - id: home
+    title: Home
+    href: "#home"
+    description: "Introduction section with mascot and call‑to‑action to buy G‑Bonk."
+  - id: buy
+    title: Buy
+    href: "#buy"
+    description: "Information about buying the token and connecting wallets."
+  - id: tokenomics
+    title: Tokenomics
+    href: "#tokenomics"
+    description: "Explanation of supply, decimals, holders and other economic data."
+  - id: roadmap
+    title: Roadmap
+    href: "#roadmap"
+    description: "Future plans with dates for token launch, staking, G‑Bank and G‑House."
+  - id: whitepaper
+    title: Whitepaper
+    href: "whitepaper.html"
+    description: "Detailed document about the vision, tokenomics and use cases."
+  - id: contact
+    title: Contact
+    href: "#contact"
+    description: "Contact details, social links and references to Dexscreener."

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G‑Bonk Whitepaper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Additional styling for whitepaper */
+      .paper {
+        max-width: 800px;
+        margin: auto;
+        padding: 2rem;
+        background-color: var(--color-surface);
+        border-radius: var(--border-radius);
+      }
+      .paper h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .paper h2 {
+        color: var(--color-primary);
+        margin-top: 2rem;
+      }
+      .paper p {
+        margin-bottom: 1rem;
+        color: var(--color-muted);
+      }
+      .back-link {
+        display: block;
+        margin-bottom: 1.5rem;
+        color: var(--color-primary);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Canvas for the animated starfield background -->
+    <canvas id="backgroundCanvas" aria-hidden="true"></canvas>
+    <header>
+      <div class="nav-container">
+        <a href="index.html#home" class="logo">
+          <img src="assets/hero-home.webp" alt="G‑Bonk Mascot" />
+          <span>G‑Bonk</span>
+        </a>
+      </div>
+    </header>
+    <main>
+      <section class="section light">
+        <div class="paper">
+          <a href="index.html#whitepaper" class="back-link">← Back to website</a>
+          <h1>G‑Bonk Whitepaper</h1>
+          <p><em>Version 1.0 – August 2025</em></p>
+
+          <h2>Introduction</h2>
+          <p>
+            G‑Bonk is a memecoin built on the Solana blockchain that aims to
+            combine fun community engagement with serious utility.  Memecoins
+            have captured the imagination of the cryptosphere, but many lack
+            long‑term plans.  G‑Bonk differentiates itself by coupling a lively
+            mascot and viral appeal with a clear roadmap and real‑world
+            applications.
+          </p>
+
+          <h2>Vision &amp; Mission</h2>
+          <p>
+            Our vision is to create a vibrant ecosystem where holders are
+            rewarded not only through speculative price appreciation but also
+            through concrete utility.  We will foster an inclusive community,
+            provide innovative financial products and empower users to be part
+            of a playful yet purposeful crypto project.
+          </p>
+
+          <h2>Tokenomics</h2>
+          <p>
+            G‑Bonk uses the SPL Token standard on Solana with six decimal
+            places.  The initial supply of <strong>865,958,249.418944 G‑BONK</strong>
+            tokens is fixed; no future minting is possible.  The token’s
+            authority and creator are the same account
+            (<code>RtrdM3...aW7Koi</code>).  At the time of writing, there are
+            approximately <strong>360 token holders</strong>【165187846141089†screenshot】.
+          </p>
+          <p>
+            Distribution is community‑driven: 50% of the supply was distributed
+            through an airdrop to early supporters, 25% is reserved for
+            development and marketing, 15% for liquidity provision on DEX
+            platforms and 10% for strategic partnerships.  Transaction fees are
+            minimal on Solana, ensuring inexpensive transfers and swaps.
+          </p>
+
+          <h2>Use Cases</h2>
+          <p>
+            Beyond simple transfers, G‑Bonk will power several products:
+          </p>
+          <ul>
+            <li><strong>Staking:</strong> Holders can stake G‑Bonk to earn
+            additional tokens and participate in governance.</li>
+            <li><strong>G‑Bank:</strong> A decentralised exchange launching in
+            Q1 2026 where fees are paid in G‑Bonk, incentivising usage and
+            burning a portion of the supply.</li>
+            <li><strong>G‑House:</strong> A collateralisation project planned for
+            Q2 2026 that will integrate real‑estate assets and allow holders to
+            pledge G‑Bonk for access to exclusive developments.</li>
+          </ul>
+
+          <h2>Roadmap</h2>
+          <ul>
+            <li><strong>Q3 2025 – Token Launch:</strong> Deployment of the
+            G‑Bonk token on Solana and initial DEX listings.</li>
+            <li><strong>Q4 2025 – Staking:</strong> Introduction of a staking
+            programme with dynamic rewards.</li>
+            <li><strong>Q1 2026 – G‑Bank:</strong> Launch of a G‑Bonk‑powered
+            exchange with low fees and liquidity incentives.</li>
+            <li><strong>Q2 2026 – G‑House:</strong> Launch of a property
+            initiative where G‑Bonk serves as collateral; more details will be
+            disclosed closer to launch.</li>
+          </ul>
+
+          <h2>Security &amp; Compliance</h2>
+          <p>
+            The G‑Bonk contract is immutable: mint and freeze authorities are
+            renounced to prevent further supply changes.  We encourage users to
+            verify the contract on Solscan and use reputable wallets.  As
+            regulatory frameworks evolve, the project will adhere to applicable
+            jurisdictions and best practices for transparency.
+          </p>
+
+          <h2>Conclusion</h2>
+          <p>
+            G‑Bonk is more than a meme.  It combines the joy of community
+            participation with a realistic roadmap and utility.  By joining
+            forces, our holders will help shape the future of decentralised
+            finance and entertainment on Solana.
+          </p>
+          <p>
+            For the latest updates, follow us on social media and stay tuned for
+            upcoming announcements.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2025 G‑Bonk. All rights reserved. This whitepaper is for
+      informational purposes only and does not constitute financial advice.</p>
+    </footer>
+    <!-- Load the site scripts to initialise the starfield, reveal animations and parallax on this page -->
+    <script src="scripts.js"></script>
+  </body>
+</html>
