@@ -391,6 +391,12 @@ nav li a:focus {
   background-color: var(--color-primary);
 }
 
+/* Size the social media icons inside the contact section */
+.social-links img.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
 /* Footer */
 footer {
   background-color: var(--color-surface);
