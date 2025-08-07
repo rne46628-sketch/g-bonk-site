@@ -27,7 +27,7 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
       <a href="#home" class="flex items-center space-x-2">
         <img src="assets/icon.png" alt="G-Bonk Icon" class="w-12 h-12 rounded-full" />
-        <span class="font-impact text-2xl tracking-widest">G‑Bonk</span>
+        <span class="font-impact text-2xl tracking-widest text-gbonkYellow">G‑Bonk</span>
       </a>
       <nav class="hidden md:flex space-x-6 uppercase text-sm">
         <a href="#buy" class="hover:text-gbonkYellow">Buy</a>
@@ -93,11 +93,11 @@
     <div class="max-w-md mx-auto">
       <canvas id="supplyChart" height="300"></canvas>
     </div>
-    <ul class="mt-6 space-y-2 text-left max-w-lg mx-auto">
-      <li>// meme‑explain: <strong>47 % circulating (~407M)</strong> – these bonks are free to fly through the galaxy and represent the tokens held by the community.</li>
-      <li>// meme‑explain: <strong>23 % treasury &amp; liquidity (~199M)</strong> – locked in treasury and liquidity pools to support DEX listings, partnerships and long‑term stability.</li>
-      <li>// meme‑explain: <strong>17 % team &amp; development (~147M)</strong> – powering ongoing dev, staking and the build‑out of G‑Trade and G‑Bank; released on a vesting schedule.</li>
-      <li>// meme‑explain: <strong>13 % burned forever (~112M)</strong> – sent into the black hole, gone but never forgotten; these tokens can never be recovered.</li>
+    <ul class="mt-6 space-y-2 text-left max-w-lg mx-auto list-disc list-inside">
+      <li><strong>47 % circulating (~407 M)</strong> – these bonks are free to fly through the galaxy and represent the tokens held by the community.</li>
+      <li><strong>23 % treasury &amp; liquidity (~199 M)</strong> – locked in treasury and liquidity pools to support DEX listings, partnerships and long‑term stability.</li>
+      <li><strong>17 % team &amp; development (~147 M)</strong> – powering ongoing dev, staking and the build‑out of G‑Trade and G‑Bank; released on a vesting schedule.</li>
+      <li><strong>13 % burned forever (~112 M)</strong> – sent into the black hole, gone but never forgotten; these tokens can never be recovered.</li>
     </ul>
   </section>
   <!-- Roadmap -->
@@ -130,19 +130,6 @@
   <section id="faq" class="py-24 bg-cosmicNavy text-center">
     <h2 class="text-4xl font-impact mb-8 text-gbonkYellow">FAQ</h2>
     <div class="max-w-2xl mx-auto space-y-4">
-      <!-- FAQ item 1 -->
-      <div x-data="{ open: false }" class="border border-gbonkPink rounded-lg">
-        <button @click="open = !open" class="w-full px-4 py-3 flex justify-between items-center focus:outline-none text-left">
-          <span>Is this financial advice?</span>
-          <span x-text="open ? '–' : '+'"></span>
-        </button>
-        <div x-show="open" class="px-4 pb-4 text-left text-starlight">
-          Absolutely not.  G‑Bonk is a memecoin, not a security and certainly not
-          investment guidance.  Always do your own research, never invest more
-          than you’re willing to bonk, and consult a qualified professional if
-          you’re unsure.  We’re just here for the laughs and lambo memes.
-        </div>
-      </div>
       <!-- FAQ item 2 -->
       <div x-data="{ open: false }" class="border border-gbonkYellow rounded-lg">
         <button @click="open = !open" class="w-full px-4 py-3 flex justify-between items-center focus:outline-none text-left">
@@ -220,7 +207,7 @@
   </section>
   <!-- Footer -->
   <footer class="py-6 bg-cosmicNavy text-center text-sm">
-    © 2025 Galactic Bonk – All rights reserved. Powered by dank memes.
+    © 2025 Galactic Bonk – All rights reserved.
   </footer>
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <script type="module" src="main.js"></script>
