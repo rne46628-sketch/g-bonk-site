@@ -1,11 +1,13 @@
 /* styles.css */
 /* Palette variables for easy theme switching */
 :root {
+  /* Primary palette inspired by the cartoon theme */
   --gbonkYellow: #ffd700;
   --gbonkPink:   #ff3860;
   --cosmicNavy:  #0d0d2b;
+  --galaxyPurple: #140a3c;
+  --nightSky: #0a0e3a;
   --starlight:   #ffffff;
-  --pastelMint:  #d2f8f0;
 }
 body.theme-light {
   /* Light mode flips dark background to pastel and dark text */
@@ -13,7 +15,58 @@ body.theme-light {
   --starlight: #1a1a2e;
 }
 .font-impact {
-  font-family: 'Anton', Impact, sans-serif;
+  /* Use a more playful, meme‑appropriate display font */
+  font-family: 'Luckiest Guy', 'Anton', Impact, sans-serif;
+}
+
+/* Hero styling */
+#home {
+  background-image: url('assets/background-stars-clouds.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#home::after {
+  /* Add a soft wave effect at the bottom of the hero section by flipping the background */
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 120px;
+  background: url('assets/background-stars-clouds.webp') bottom center / cover no-repeat;
+  transform: scaleY(-1);
+  z-index: -1;
+}
+
+/* Section backgrounds */
+section {
+  background-color: var(--nightSky);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#home, #contact {
+  /* Keep hero and contact backgrounds distinct */
+  background-color: transparent;
+}
+.bg-cosmicNavy {
+  background-color: var(--nightSky);
+}
+
+/* Headings tweaks */
+h1, h2, h3 {
+  letter-spacing: 1px;
+}
+
+/* CTA button styling tweaks */
+a.inline-block, .grid a.block {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+a.inline-block:hover, .grid a.block:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 0 10px var(--gbonkPink);
 }
 .bg-cosmicNavy { background-color: var(--cosmicNavy); }
 .text-gbonkYellow { color: var(--gbonkYellow); }
