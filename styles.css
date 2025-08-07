@@ -9,18 +9,21 @@
 /* Basisvariabelen */
 :root {
   /* Lichtere, speelse kleuren geïnspireerd op gorillabsc.vip */
-  --color-bg: #0c1333;
-  --color-surface: #11204d;
-  --color-primary: #f9c846; /* warm geel voor primaire elementen */
-  --color-secondary: #f4a623; /* donkerder oranje voor hover‑toestanden */
-  --color-accent: #e85a71; /* roze accent voor highlights */
-  --color-text: #ffffff;
-  --color-muted: #d0d7e5;
-  --border-radius: 0.5rem;
-  --max-width: 1200px;
-  --spacing: 1rem;
-  --header-height: 64px;
-  font-family: 'Inter', sans-serif;
+      /* Vibrant, playful color palette for a true meme vibe */
+      --color-bg: #0a0b1f;
+      --color-surface: #14162e;
+      --color-primary: #ff007f; /* neon pink for primary elements */
+      --color-secondary: #00d4ff; /* bright cyan for secondary and hover */
+      --color-accent: #ffd700; /* gold accent for highlights */
+      --color-text: #ffffff;
+      --color-muted: #c5cbea;
+      --border-radius: 0.75rem;
+      --max-width: 1200px;
+      --spacing: 1rem;
+      --header-height: 64px;
+      /* Define separate fonts for headings and body text */
+      --font-heading: 'Comic Neue', cursive;
+      font-family: 'Inter', sans-serif;
 }
 
 /* Globale resets */
@@ -244,6 +247,10 @@ nav li a:focus {
 .btn-primary:hover,
 .btn-primary:focus {
   background-color: var(--color-secondary);
+  /* Slightly enlarge and add glow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 0 8px var(--color-accent);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 /* Section: tokenomics */
@@ -363,6 +370,10 @@ nav li a:focus {
 .btn-secondary:focus {
   background-color: var(--color-primary);
   color: var(--color-bg);
+  /* Add playful bounce and glow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 0 8px var(--color-accent);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 /* Section: contact */
@@ -371,6 +382,38 @@ nav li a:focus {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+}
+
+/* Meme theme: headings use a playful font */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
+
+/* Style for the subheading under the hero title */
+.subheading {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+/* Meme gallery layout */
+.meme-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+.meme-item {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.meme-item:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 .social-links {
   display: flex;
