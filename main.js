@@ -1,9 +1,26 @@
 // main.js
 // Starfield generation and animation
-const canvas = document.getElementById('starfield');
+// Select whichever canvas exists: #starfield on the main site or #backgroundCanvas on the whitepaper
+const canvas = document.getElementById('starfield') || document.getElementById('backgroundCanvas');
 const ctx = canvas.getContext('2d');
 let width, height;
 const stars = [];
+
+// Create a collection of falling stars for an extra layer of motion
+const fallingStars = [];
+
+// Initialise falling stars with random positions and speeds
+function initFallingStars(count = 25) {
+  for (let i = 0; i < count; i++) {
+    fallingStars.push({
+      x: Math.random() * width,
+      y: Math.random() * -height,
+      length: 10 + Math.random() * 20,
+      speed: 2 + Math.random() * 3,
+    });
+  }
+}
+
 function resizeCanvas() {
   width = canvas.width = window.innerWidth;
   height = canvas.height = window.innerHeight;
@@ -14,6 +31,9 @@ resizeCanvas();
 for (let i = 0; i < 150; i++) {
   stars.push({ x: Math.random() * width, y: Math.random() * height, r: Math.random() * 1.5 });
 }
+
+// Kick off the falling stars
+initFallingStars(25);
 function drawStars() {
   ctx.clearRect(0, 0, width, height);
   ctx.fillStyle = 'white';
@@ -22,6 +42,27 @@ function drawStars() {
     ctx.beginPath();
     ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
     ctx.fill();
+  });
+
+  // Draw falling stars as streaks
+  ctx.globalAlpha = 0.8;
+  ctx.strokeStyle = 'rgba(255,255,255,0.8)';
+  ctx.lineWidth = 2;
+  fallingStars.forEach((fStar) => {
+    ctx.beginPath();
+    ctx.moveTo(fStar.x, fStar.y);
+    ctx.lineTo(fStar.x - fStar.length * 0.2, fStar.y + fStar.length);
+    ctx.stroke();
+  });
+  // Update positions of falling stars
+  fallingStars.forEach((fStar) => {
+    fStar.y += fStar.speed;
+    fStar.x -= fStar.speed * 0.2;
+    if (fStar.y > height || fStar.x < 0) {
+      // Reset star to the top with a new random position
+      fStar.x = Math.random() * width;
+      fStar.y = -Math.random() * height;
+    }
   });
   requestAnimationFrame(drawStars);
 }

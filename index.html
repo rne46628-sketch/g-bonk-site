@@ -43,16 +43,21 @@
     </div>
   </header>
   <!-- Hero -->
-  <section id="home" class="pt-24 pb-32 flex flex-col md:flex-row items-center justify-between text-center md:text-left px-4">
-    <div class="flex-1 space-y-4">
+  <section id="home" class="pt-24 pb-32 flex flex-col md:flex-row items-center px-4">
+    <!-- Left column: title, tagline and CTA -->
+    <div class="flex-1 space-y-6 text-center md:text-left">
       <h1 class="text-6xl md:text-8xl font-impact text-gbonkYellow drop-shadow-lg">GALACTIC BONK</h1>
-      <!-- New tagline matching the uploaded theme -->
-      <p class="text-xl md:text-2xl text-gbonkPink max-w-md">From zero to galaxy, our dog leads the bonk to the moon!</p>
-      <!-- Embed the looping hero video above the call-to-action -->
-      <video src="assets/hero-video.mp4" autoplay muted loop playsinline class="mx-auto mt-6 w-64 h-64 rounded-lg shadow-lg" poster="assets/hero-home.webp"></video>
-      <a href="#buy" class="inline-block mt-6 bg-gbonkPink hover:bg-gbonkYellow text-cosmicNavy font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-110">BOOWK 🚀</a>
+      <p class="text-xl md:text-2xl text-starlight max-w-md">From zero to galaxy, our dog leads the bonk to the moon!</p>
+      <a href="#buy" class="inline-block bg-gbonkPink hover:bg-gbonkYellow text-cosmicNavy font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-110">BOOWK 🚀</a>
     </div>
-    <!-- Removed the hero graphic to fully embrace the starry layout -->
+    <!-- Right column: larger hero video -->
+    <div class="flex-1 flex justify-center mt-8 md:mt-0">
+      <video src="assets/hero-video.mp4" autoplay muted loop playsinline poster="assets/hero-home.webp" class="w-72 h-72 md:w-96 md:h-96 rounded-lg shadow-lg"></video>
+    </div>
+
+    <!-- Decorative planet and sun floating in the hero section -->
+    <img src="assets/planet.webp" alt="Decorative planet" class="planet-icon" />
+    <img src="assets/sun.webp" alt="Decorative sun" class="sun-icon" />
   </section>
 
   <!-- About Section -->

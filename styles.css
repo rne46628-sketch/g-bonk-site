@@ -108,14 +108,41 @@ header {
   filter: drop-shadow(0 0 4px var(--gbonkPink));
 }
 
+/* Decorative planet and sun icons in the hero section */
+#home .planet-icon, #home .sun-icon {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+#home .planet-icon {
+  bottom: 15%;
+  left: 5%;
+  width: 120px;
+  height: auto;
+}
+#home .sun-icon {
+  top: 10%;
+  right: 5%;
+  width: 140px;
+  height: auto;
+}
+
 /* Roadmap item styling: cosmic panels with subtle gradients */
 /* Roadmap cards: layer a starry texture over a dark gradient so each item feels like
    its own slice of the cosmos. The underlying gradient keeps the text legible
    while the stars in the background hint at travel through space. */
+/*
+ * Roadmap cards: instead of a plain gradient we layer a swirling
+ * stardust path over the cosmic clouds. This makes each milestone
+ * feel like you're travelling deeper into the galaxy. A dark
+ * overlay keeps the text legible.
+ */
 .roadmap-item {
-  /* Overlay a dark gradient on top of the starry background */
-  background: linear-gradient(135deg, rgba(20, 10, 60, 0.9), rgba(0, 0, 0, 0.8)),
-              url('assets/background-stars-clouds.webp') center/cover;
+  /* Dark overlay for legibility */
+  background-image: linear-gradient(135deg, rgba(20, 10, 60, 0.9), rgba(0, 0, 0, 0.85)),
+    url('assets/roadmap-swirl.webp');
+  background-size: cover;
+  background-position: center;
   color: var(--starlight);
   border-radius: 0.75rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
