@@ -94,10 +94,10 @@
       <canvas id="supplyChart" height="300"></canvas>
     </div>
     <ul class="mt-6 space-y-2 text-left max-w-lg mx-auto">
-      <li>// meme‑explain: <strong>47% circulating</strong> – these bonks are free to fly through the galaxy.</li>
-      <li>// meme‑explain: <strong>23% treasury &amp; liquidity</strong> – locked for future DEX listings, partnerships and liquidity.</li>
-      <li>// meme‑explain: <strong>17% team &amp; development</strong> – powering ongoing dev, staking and G‑Trade/G‑Bank build‑out.</li>
-      <li>// meme‑explain: <strong>13% burned forever</strong> – sent into the black hole, gone but never forgotten.</li>
+      <li>// meme‑explain: <strong>47 % circulating (~407M)</strong> – these bonks are free to fly through the galaxy and represent the tokens held by the community.</li>
+      <li>// meme‑explain: <strong>23 % treasury &amp; liquidity (~199M)</strong> – locked in treasury and liquidity pools to support DEX listings, partnerships and long‑term stability.</li>
+      <li>// meme‑explain: <strong>17 % team &amp; development (~147M)</strong> – powering ongoing dev, staking and the build‑out of G‑Trade and G‑Bank; released on a vesting schedule.</li>
+      <li>// meme‑explain: <strong>13 % burned forever (~112M)</strong> – sent into the black hole, gone but never forgotten; these tokens can never be recovered.</li>
     </ul>
   </section>
   <!-- Roadmap -->
@@ -181,6 +181,21 @@
           For a deep dive into our vision, roadmap and tokenomics, check out our
           <a href="whitepaper.html" class="underline text-gbonkPink hover:text-gbonkYellow">whitepaper</a>.
           It’s packed with juicy details on how we plan to bonk the galaxy.
+        </div>
+      </div>
+
+      <!-- FAQ item 5: Token distribution -->
+      <div x-data="{ open: false }" class="border border-gbonkPink rounded-lg">
+        <button @click="open = !open" class="w-full px-4 py-3 flex justify-between items-center focus:outline-none text-left">
+          <span>How are the tokens distributed?</span>
+          <span x-text="open ? '–' : '+'"></span>
+        </button>
+        <div x-show="open" class="px-4 pb-4 text-left text-starlight">
+          The G‑Bonk supply is divided into four buckets: about <strong>13 % of tokens are burned forever</strong>,
+          <strong>23 %</strong> are locked in treasury and liquidity pools to stabilise price and support DEX listings,
+          <strong>17 %</strong> go to the team and developers on a vesting schedule, and roughly <strong>47 %</strong>
+          make up the circulating supply held by the community.  These allocations ensure long‑term sustainability and
+          align incentives between holders, builders and the ecosystem.
         </div>
       </div>
     </div>
