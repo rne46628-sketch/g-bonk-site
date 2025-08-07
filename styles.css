@@ -79,6 +79,52 @@ a.inline-block:hover, .grid a.block:hover {
 .masonry {
   column-count: 1;
 }
+
+/* Global typography adjustments for better readability on dark backgrounds */
+p,
+li {
+  color: var(--starlight);
+}
+
+/* Navigation links: ensure high contrast against the dark sky */
+header nav a {
+  color: var(--starlight);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+/* Navbar backdrop: apply a semi‑transparent dark panel so links remain legible even
+   over the starry background, and add a subtle shadow to separate it from the page. */
+header {
+  background-color: rgba(13, 13, 43, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Social icon sizing */
+.social-icon {
+  width: 28px;
+  height: 28px;
+  /* Add a soft glow so the icons pop against the dark background */
+  filter: drop-shadow(0 0 4px var(--gbonkPink));
+}
+
+/* Roadmap item styling: cosmic panels with subtle gradients */
+/* Roadmap cards: layer a starry texture over a dark gradient so each item feels like
+   its own slice of the cosmos. The underlying gradient keeps the text legible
+   while the stars in the background hint at travel through space. */
+.roadmap-item {
+  /* Overlay a dark gradient on top of the starry background */
+  background: linear-gradient(135deg, rgba(20, 10, 60, 0.9), rgba(0, 0, 0, 0.8)),
+              url('assets/background-stars-clouds.webp') center/cover;
+  color: var(--starlight);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* FAQ accordion text colour */
+#faq button span {
+  color: var(--starlight);
+}
 @media (min-width: 640px) { .masonry-sm { column-count: 2; } }
 @media (min-width: 768px) { .masonry-md { column-count: 3; } }
 .masonry img { break-inside: avoid; margin-bottom: 1rem; }
