@@ -26,7 +26,7 @@
   <header class="z-10 fixed w-full backdrop-blur bg-opacity-80" x-data="{ open:false }">
     <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
       <a href="#home" class="flex items-center space-x-2">
-        <img src="assets/logo.gif" alt="G-Bonk Mascot" class="w-12 h-12 rounded-full" />
+        <img src="assets/icon.png" alt="G-Bonk Icon" class="w-12 h-12 rounded-full" />
         <span class="font-impact text-2xl tracking-widest">G‑Bonk</span>
       </a>
       <nav class="hidden md:flex space-x-6 uppercase text-sm">
@@ -51,6 +51,8 @@
       <h1 class="text-6xl md:text-8xl font-impact text-gbonkYellow drop-shadow-lg">GALACTIC BONK</h1>
       <!-- New tagline matching the uploaded theme -->
       <p class="text-xl md:text-2xl text-gbonkPink max-w-md">From zero to galaxy, our dog leads the bonk to the moon!</p>
+      <!-- Embed the looping hero video above the call-to-action -->
+      <video src="assets/hero-video.mp4" autoplay muted loop playsinline class="mx-auto mt-6 w-64 h-64 rounded-lg shadow-lg" poster="assets/hero-home.webp"></video>
       <a href="#buy" class="inline-block mt-6 bg-gbonkPink hover:bg-gbonkYellow text-cosmicNavy font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-110">BOOWK 🚀</a>
     </div>
     <!-- Removed the hero graphic to fully embrace the starry layout -->
@@ -93,29 +95,27 @@
   <!-- Roadmap -->
   <section id="roadmap" class="py-24 bg-cosmicNavy text-center">
     <h2 class="text-4xl font-impact mb-8 text-gbonkYellow">Roadmap</h2>
-    <div class="grid gap-8 md:grid-cols-3">
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <!-- Q3 2025: Token Launch -->
       <div class="p-6 bg-cosmicNavy border-4 border-gbonkPink rounded-lg">
-        <h3 class="text-2xl font-impact mb-2">Phase 1</h3>
-        <p>Launch & Meme Invasion – Spread the bonk across Solana.</p>
+        <h3 class="text-xl font-impact mb-2">Q3 2025</h3>
+        <p>Token launch & community bonk‑off.</p>
       </div>
+      <!-- Q4 2025: Staking -->
       <div class="p-6 bg-cosmicNavy border-4 border-gbonkYellow rounded-lg">
-        <h3 class="text-2xl font-impact mb-2">Phase 2</h3>
-        <p>Galaxy Partnerships – Meme with the biggest brains in crypto.</p>
+        <h3 class="text-xl font-impact mb-2">Q4 2025</h3>
+        <p>Staking program goes live – earn rewards by locking your $GBONK.</p>
       </div>
+      <!-- Q1 2026: G‑Trade -->
       <div class="p-6 bg-cosmicNavy border-4 border-gbonkPink rounded-lg">
-        <h3 class="text-2xl font-impact mb-2">Phase 3</h3>
-        <p>Universal Domination – Bonk every planet, star and moon.</p>
+        <h3 class="text-xl font-impact mb-2">Q1 2026</h3>
+        <p>Launch of G‑Trade, an exchange platform using fees in G‑Bonk.</p>
       </div>
-    </div>
-  </section>
-  <!-- Meme Gallery -->
-  <section id="memes" class="py-24 bg-cosmicNavy text-center">
-    <h2 class="text-4xl font-impact mb-8 text-gbonkYellow">Meme Gallery</h2>
-    <div class="masonry sm:masonry-sm md:masonry-md gap-4 px-4" id="gallery">
-      <!-- Lazy-loaded images for memes -->
-      <img src="assets/meme1.webp" alt="Meme 1" class="rounded-lg hover:scale-105 transform transition" />
-      <img src="assets/meme2.webp" alt="Meme 2" class="rounded-lg hover:scale-105 transform transition" />
-      <!-- Removed the larger promo images from the gallery to keep focus on actual memes -->
+      <!-- Q3 2026: G‑Bank -->
+      <div class="p-6 bg-cosmicNavy border-4 border-gbonkYellow rounded-lg">
+        <h3 class="text-xl font-impact mb-2">Q3 2026</h3>
+        <p>Launch of G‑Bank – the first fiat & crypto bank for bonkers.</p>
+      </div>
     </div>
   </section>
   <!-- FAQ -->
@@ -149,9 +149,8 @@
   <section id="contact" class="py-24 bg-cosmicNavy text-center">
     <h2 class="text-4xl font-impact mb-8 text-gbonkYellow">Join The Community</h2>
     <div class="flex justify-center space-x-6 mb-8">
-      <a href="https://dexscreener.com/solana/AjdCzXwien2FmTx3GDZeA6YX34A6rzhQCCZXSa7tqXJ4" aria-label="Dexscreener" class="text-gbonkPink text-3xl hover:scale-125 transform transition">📈</a>
-      <a href="https://t.me/GalacticBonk" aria-label="Telegram" class="text-gbonkPink text-3xl hover:scale-125 transform transition">📣</a>
       <a href="https://x.com/GalacticBonk" aria-label="Twitter" class="text-gbonkPink text-3xl hover:scale-125 transform transition">🐦</a>
+      <a href="https://t.me/GalacticBonk" aria-label="Telegram" class="text-gbonkPink text-3xl hover:scale-125 transform transition">📣</a>
       <!-- Link to the whitepaper for extra info -->
       <a href="whitepaper.html" class="bg-gbonkPink hover:bg-gbonkYellow text-cosmicNavy font-bold py-2 px-4 rounded-full transition-transform transform hover:scale-105 text-base">Whitepaper</a>
     </div>

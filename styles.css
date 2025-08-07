@@ -10,9 +10,9 @@
   --starlight:   #ffffff;
 }
 body.theme-light {
-  /* Light mode flips dark background to pastel and dark text */
-  --cosmicNavy: #e0e6ff;
-  --starlight: #1a1a2e;
+  /* Keep the same colours in light mode to maintain galaxy aesthetic */
+  --cosmicNavy: var(--nightSky);
+  --starlight: var(--starlight);
 }
 .font-impact {
   /* Use a more playful, meme‑appropriate display font */
