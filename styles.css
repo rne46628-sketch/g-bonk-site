@@ -93,6 +93,19 @@ header nav a {
   transition: color 0.2s ease;
 }
 
+/* Utility classes to map text colours to our custom palette when Tailwind does not generate them */
+.text-starlight {
+  color: var(--starlight);
+}
+
+.text-gbonkPink {
+  color: var(--gbonkPink);
+}
+
+.text-gbonkYellow {
+  color: var(--gbonkYellow);
+}
+
 /* Navbar backdrop: apply a semi‑transparent dark panel so links remain legible even
    over the starry background, and add a subtle shadow to separate it from the page. */
 header {
