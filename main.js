@@ -108,3 +108,21 @@ tweets.forEach((tweet) => {
   li.className = 'border p-3 rounded-lg bg-cosmicNavy text-gbonkYellow';
   tweetFeed.appendChild(li);
 });
+
+// Highlight the tokenomics donut chart when hovering over each list item. This
+// subtle interaction draws the eye to the chart and reinforces the connection
+// between the numbers and the graphic. We select all list items under the
+// tokenomics section and apply a CSS filter to brighten the chart canvas on
+// mouse enter and reset on mouse leave.
+const tokenItems = document.querySelectorAll('#tokenomics ul li');
+const chartCanvas = document.getElementById('supplyChart');
+tokenItems.forEach((item) => {
+  item.addEventListener('mouseenter', () => {
+    // Increase brightness slightly when a tokenomics list item is hovered
+    chartCanvas.style.filter = 'brightness(1.4)';
+  });
+  item.addEventListener('mouseleave', () => {
+    // Reset brightness back to normal
+    chartCanvas.style.filter = 'brightness(1)';
+  });
+});
