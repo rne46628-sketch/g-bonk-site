@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-cosmicNavy text-starlight flex flex-col min-h-screen" x-data="{ darkMode: false }" :class="{ 'theme-light': !darkMode, 'theme-dark': darkMode }">
+<body class="bg-cosmicNavy text-starlight flex flex-col min-h-screen">
   <!-- Starfield Canvas -->
   <canvas id="starfield" class="fixed top-0 left-0 w-full h-full pointer-events-none"></canvas>
   <!-- Navbar -->
@@ -38,11 +38,7 @@
         <a href="#faq" class="hover:text-gbonkYellow">FAQ</a>
         <a href="#contact" class="hover:text-gbonkYellow">Community</a>
       </nav>
-      <!-- Dark/light mode toggle -->
-      <button @click="darkMode = !darkMode" class="md:ml-6 p-2 rounded-full bg-gbonkPink text-cosmicNavy">
-        <span x-show="!darkMode">🌙</span>
-        <span x-show="darkMode">🌞</span>
-      </button>
+      <!-- Removed dark/light mode toggle -->
     </div>
   </header>
   <!-- Hero -->
