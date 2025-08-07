@@ -134,6 +134,16 @@ header {
 #faq button span {
   color: var(--starlight);
 }
+
+/* Ensure FAQ answers are legible on the dark backdrop */
+#faq div[x-show] {
+  color: var(--starlight);
+}
+
+/* Links inside FAQ answers should retain brand colours */
+#faq div[x-show] a {
+  color: var(--gbonkPink);
+}
 @media (min-width: 640px) { .masonry-sm { column-count: 2; } }
 @media (min-width: 768px) { .masonry-md { column-count: 3; } }
 .masonry img { break-inside: avoid; margin-bottom: 1rem; }
