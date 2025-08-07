@@ -72,11 +72,14 @@ const chartCtx = document.getElementById('supplyChart').getContext('2d');
 new Chart(chartCtx, {
   type: 'doughnut',
   data: {
-    labels: ['Liquidity Pool', 'Community', 'Treasury'],
+    // Updated tokenomics distribution reflecting circulation, treasury/liquidity,
+    // team/development and burned supply. Percentages are approximated
+    // based on current supply and Solscan holder distribution.
+    labels: ['Circulating', 'Treasury & Liquidity', 'Team/Dev', 'Burned'],
     datasets: [
       {
-        data: [50, 25, 25],
-        backgroundColor: ['#ffd700', '#ff3860', '#00c2cb'],
+        data: [47, 23, 17, 13],
+        backgroundColor: ['#ffd700', '#ff3860', '#00c2cb', '#9b59b6'],
         borderWidth: 0,
       },
     ],
