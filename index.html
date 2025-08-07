@@ -61,7 +61,14 @@
   <!-- About Section -->
   <section id="about" class="py-24 bg-cosmicNavy text-center px-4">
     <h2 class="text-4xl font-impact mb-6 text-gbonkYellow">About</h2>
-    <p class="max-w-3xl mx-auto text-lg leading-relaxed">G‑Bonk is a new memecoin, excited to go to the moon. Led by the doge, a daring bonker for new heights in the crypto universe. Hold on tight and enjoy the ride.</p>
+    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+      G‑Bonk is a Solana‑powered meme‑coin built by and for our community of
+      interstellar degens.  We’re not just chasing candles – our mission is to
+      build a vibrant ecosystem where memes meet real utility.  From fun
+      airdrops and staking rewards to upcoming products like G‑Trade and
+      G‑Bank, every bonker can take part in the journey.  Our doge mascot
+      doesn’t just point at the moon – he drags us there.
+    </p>
   </section>
   <!-- Buy Section -->
   <section id="buy" class="py-24 bg-cosmicNavy text-center">
@@ -86,10 +93,11 @@
     <div class="max-w-md mx-auto">
       <canvas id="supplyChart" height="300"></canvas>
     </div>
-    <ul class="mt-6 space-y-2">
-      <li>// meme-explain: Liquidity locked harder than Diamond Hands 🧤💎</li>
-      <li>// meme-explain: Community wallet to fund dank memes 🎨🐕</li>
-      <li>// meme-explain: Treasury for future galaxy bonkening 🚀🌌</li>
+    <ul class="mt-6 space-y-2 text-left max-w-lg mx-auto">
+      <li>// meme‑explain: <strong>47% circulating</strong> – these bonks are free to fly through the galaxy.</li>
+      <li>// meme‑explain: <strong>23% treasury &amp; liquidity</strong> – locked for future DEX listings, partnerships and liquidity.</li>
+      <li>// meme‑explain: <strong>17% team &amp; development</strong> – powering ongoing dev, staking and G‑Trade/G‑Bank build‑out.</li>
+      <li>// meme‑explain: <strong>13% burned forever</strong> – sent into the black hole, gone but never forgotten.</li>
     </ul>
   </section>
   <!-- Roadmap -->
@@ -122,26 +130,58 @@
   <section id="faq" class="py-24 bg-cosmicNavy text-center">
     <h2 class="text-4xl font-impact mb-8 text-gbonkYellow">FAQ</h2>
     <div class="max-w-2xl mx-auto space-y-4">
+      <!-- FAQ item 1 -->
       <div x-data="{ open: false }" class="border border-gbonkPink rounded-lg">
-        <button @click="open = !open" class="w-full px-4 py-3 flex justify-between items-center focus:outline-none">
+        <button @click="open = !open" class="w-full px-4 py-3 flex justify-between items-center focus:outline-none text-left">
           <span>Is this financial advice?</span>
           <span x-text="open ? '–' : '+'"></span>
         </button>
-        <div x-show="open" class="px-4 pb-4 text-left">Lol, no. Do your own bonkening. 🚫💼</div>
+        <div x-show="open" class="px-4 pb-4 text-left text-starlight">
+          Absolutely not.  G‑Bonk is a memecoin, not a security and certainly not
+          investment guidance.  Always do your own research, never invest more
+          than you’re willing to bonk, and consult a qualified professional if
+          you’re unsure.  We’re just here for the laughs and lambo memes.
+        </div>
       </div>
+      <!-- FAQ item 2 -->
       <div x-data="{ open: false }" class="border border-gbonkYellow rounded-lg">
-        <button @click="open = !open" class="w-full px-4 py-3 flex justify-between items-center focus:outline-none">
+        <button @click="open = !open" class="w-full px-4 py-3 flex justify-between items-center focus:outline-none text-left">
           <span>What is $GBONK?</span>
           <span x-text="open ? '–' : '+'"></span>
         </button>
-        <div x-show="open" class="px-4 pb-4 text-left">A cosmic meme-coin on Solana. Powered by community, fuelled by giggles.</div>
+        <div x-show="open" class="px-4 pb-4 text-left text-starlight">
+          $GBONK is the native token of the Galactic Bonk ecosystem, minted on
+          the Solana blockchain.  It powers everything from tipping and
+          governance to staking rewards and future utility on our DEX (G‑Trade)
+          and bank (G‑Bank).  It’s 100 % community‑driven and has a fixed
+          supply – no hidden mints or stealth burns.
+        </div>
       </div>
+      <!-- FAQ item 3 -->
       <div x-data="{ open: false }" class="border border-gbonkPink rounded-lg">
-        <button @click="open = !open" class="w-full px-4 py-3 flex justify-between items-center focus:outline-none">
+        <button @click="open = !open" class="w-full px-4 py-3 flex justify-between items-center focus:outline-none text-left">
           <span>How do I hodl?</span>
           <span x-text="open ? '–' : '+'"></span>
         </button>
-        <div x-show="open" class="px-4 pb-4 text-left">Buy on Raydium or Jupiter, then clutch your GBONK tighter than your childhood teddy.</div>
+        <div x-show="open" class="px-4 pb-4 text-left text-starlight">
+          You can pick up $GBONK on Dexscreener or DexTools using a Solana
+          wallet (like Phantom or Solflare).  Once you’ve swapped, store your
+          tokens in your wallet and keep an eye out for our upcoming staking
+          program – you’ll be able to lock your GBONK and earn yield for helping
+          secure the galaxy.
+        </div>
+      </div>
+      <!-- FAQ item 4 -->
+      <div x-data="{ open: false }" class="border border-gbonkYellow rounded-lg">
+        <button @click="open = !open" class="w-full px-4 py-3 flex justify-between items-center focus:outline-none text-left">
+          <span>Where can I read more?</span>
+          <span x-text="open ? '–' : '+'"></span>
+        </button>
+        <div x-show="open" class="px-4 pb-4 text-left text-starlight">
+          For a deep dive into our vision, roadmap and tokenomics, check out our
+          <a href="whitepaper.html" class="underline text-gbonkPink hover:text-gbonkYellow">whitepaper</a>.
+          It’s packed with juicy details on how we plan to bonk the galaxy.
+        </div>
       </div>
     </div>
   </section>
