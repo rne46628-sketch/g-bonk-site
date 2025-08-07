@@ -126,3 +126,60 @@ tokenItems.forEach((item) => {
     chartCanvas.style.filter = 'brightness(1)';
   });
 });
+
+// Wallet connection logic
+// This function attempts to connect to one of the supported wallets (Phantom on Solana,
+// Binance Chain Wallet or Trust Wallet on EVM chains). It updates the UI with the
+// connected address or displays an error if no wallet is available. The Connect
+// Wallet button and address field are in the Buy section.
+const connectBtn = document.getElementById('connect-wallet');
+const walletAddressElem = document.getElementById('wallet-address');
+
+async function connectWallet() {
+  if (!connectBtn) return;
+  // Disable the button while attempting to connect
+  connectBtn.disabled = true;
+  connectBtn.textContent = 'Connecting…';
+  try {
+    // Phantom (Solana)
+    if (window.solana && window.solana.isPhantom) {
+      const resp = await window.solana.connect();
+      walletAddressElem.textContent = `Connected: ${resp.publicKey.toString()}`;
+      connectBtn.textContent = 'Connected';
+      return;
+    }
+    // Binance Chain Wallet (EVM)
+    if (window.BinanceChain) {
+      const accounts = await window.BinanceChain.request({ method: 'eth_requestAccounts' });
+      if (accounts && accounts.length > 0) {
+        walletAddressElem.textContent = `Connected: ${accounts[0]}`;
+        connectBtn.textContent = 'Connected';
+        return;
+      }
+    }
+    // Trust Wallet or any EVM wallet exposing window.ethereum
+    if (window.ethereum) {
+      // Some wallets (MetaMask, Trust Wallet) expose isTrust or isTrustWallet flags
+      const isTrust = window.ethereum.isTrust || window.ethereum.isTrustWallet;
+      // Request accounts only if the provider is installed
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      if (accounts && accounts.length > 0) {
+        walletAddressElem.textContent = `Connected: ${accounts[0]}`;
+        connectBtn.textContent = 'Connected';
+        return;
+      }
+    }
+    // If no wallet found, inform the user
+    alert('No supported wallet detected. Please install Phantom, Binance Chain Wallet or Trust Wallet.');
+    connectBtn.textContent = 'Connect Wallet';
+  } catch (err) {
+    console.error('Wallet connection error', err);
+    alert('Failed to connect to wallet. Please try again.');
+    connectBtn.textContent = 'Connect Wallet';
+  } finally {
+    connectBtn.disabled = false;
+  }
+}
+if (connectBtn) {
+  connectBtn.addEventListener('click', connectWallet);
+}

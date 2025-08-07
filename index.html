@@ -48,12 +48,20 @@
     <div class="flex-1 space-y-6 text-center md:text-left">
       <h1 class="text-6xl md:text-8xl font-impact text-gbonkYellow drop-shadow-lg">GALACTIC BONK</h1>
       <p class="text-xl md:text-2xl text-starlight max-w-md">From zero to galaxy, our dog leads the bonk to the moon!</p>
-      <a href="#buy" class="inline-block bg-gbonkPink hover:bg-gbonkYellow text-cosmicNavy font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-110">BOOWK 🚀</a>
+      <!-- Update the CTA text to BONK and keep the meme rocket emoji -->
+      <a href="#buy" class="inline-block bg-gbonkPink hover:bg-gbonkYellow text-cosmicNavy font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-110">BONK 🚀</a>
     </div>
     <!-- Right column: larger hero video -->
     <div class="flex-1 flex justify-center mt-8 md:mt-0">
-      <video src="assets/hero-video.mp4" autoplay muted loop playsinline poster="assets/hero-home.webp"
-        class="w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] rounded-lg shadow-lg"></video>
+      <video
+        src="assets/hero-video.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="assets/hero-home.webp"
+        class="w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] rounded-lg"
+      ></video>
     </div>
 
   </section>
@@ -74,6 +82,9 @@
   <section id="buy" class="py-24 bg-cosmicNavy text-center">
     <h2 class="text-4xl font-impact mb-6 text-gbonkYellow">Buy $GBONK</h2>
     <p class="mb-8 text-lg max-w-2xl mx-auto">How to ape in under 60 seconds. Pick your portal and bonk away!</p>
+    <!-- Wallet integration: provide a Connect button and show the user's address once connected -->
+    <button id="connect-wallet" class="mt-4 mb-4 bg-gbonkPink hover:bg-gbonkYellow text-cosmicNavy font-bold py-2 px-6 rounded-full transition-transform transform hover:scale-105">Connect Wallet</button>
+    <p id="wallet-address" class="mb-8 text-sm text-gbonkYellow"></p>
     <div class="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
       <!-- Dexscreener link: direct to the GBONK pair on Solana -->
       <a href="https://dexscreener.com/solana/AjdCzXwien2FmTx3GDZeA6YX34A6rzhQCCZXSa7tqXJ4" target="_blank" class="block bg-gbonkPink hover:bg-gbonkYellow text-cosmicNavy rounded-xl p-6 shadow-lg transition-transform transform hover:scale-105">
