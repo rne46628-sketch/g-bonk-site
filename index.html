@@ -34,8 +34,9 @@
         <a href="#about" class="hover:text-gbonkYellow">About</a>
         <a href="#tokenomics" class="hover:text-gbonkYellow">Tokenomics</a>
         <a href="#roadmap" class="hover:text-gbonkYellow">Roadmap</a>
-        <a href="#memes" class="hover:text-gbonkYellow">Memes</a>
         <a href="#faq" class="hover:text-gbonkYellow">FAQ</a>
+        <!-- Add a direct link to the whitepaper in the nav bar -->
+        <a href="whitepaper.html" class="hover:text-gbonkYellow">Whitepaper</a>
         <a href="#contact" class="hover:text-gbonkYellow">Community</a>
       </nav>
       <!-- Removed dark/light mode toggle -->
@@ -93,22 +94,22 @@
     <h2 class="text-4xl font-impact mb-8 text-gbonkYellow">Roadmap</h2>
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
       <!-- Q3 2025: Token Launch -->
-      <div class="p-6 bg-cosmicNavy border-4 border-gbonkPink rounded-lg">
+      <div class="roadmap-item p-6 border-4 border-gbonkPink rounded-lg">
         <h3 class="text-xl font-impact mb-2">Q3 2025</h3>
         <p>Token launch & community bonk‑off.</p>
       </div>
       <!-- Q4 2025: Staking -->
-      <div class="p-6 bg-cosmicNavy border-4 border-gbonkYellow rounded-lg">
+      <div class="roadmap-item p-6 border-4 border-gbonkYellow rounded-lg">
         <h3 class="text-xl font-impact mb-2">Q4 2025</h3>
         <p>Staking program goes live – earn rewards by locking your $GBONK.</p>
       </div>
       <!-- Q1 2026: G‑Trade -->
-      <div class="p-6 bg-cosmicNavy border-4 border-gbonkPink rounded-lg">
+      <div class="roadmap-item p-6 border-4 border-gbonkPink rounded-lg">
         <h3 class="text-xl font-impact mb-2">Q1 2026</h3>
         <p>Launch of G‑Trade, an exchange platform using fees in G‑Bonk.</p>
       </div>
       <!-- Q3 2026: G‑Bank -->
-      <div class="p-6 bg-cosmicNavy border-4 border-gbonkYellow rounded-lg">
+      <div class="roadmap-item p-6 border-4 border-gbonkYellow rounded-lg">
         <h3 class="text-xl font-impact mb-2">Q3 2026</h3>
         <p>Launch of G‑Bank – the first fiat & crypto bank for bonkers.</p>
       </div>
@@ -144,9 +145,14 @@
   <!-- Contact / Community -->
   <section id="contact" class="py-24 bg-cosmicNavy text-center">
     <h2 class="text-4xl font-impact mb-8 text-gbonkYellow">Join The Community</h2>
-    <div class="flex justify-center space-x-6 mb-8">
-      <a href="https://x.com/GalacticBonk" aria-label="Twitter" class="text-gbonkPink text-3xl hover:scale-125 transform transition">🐦</a>
-      <a href="https://t.me/GalacticBonk" aria-label="Telegram" class="text-gbonkPink text-3xl hover:scale-125 transform transition">📣</a>
+    <div class="flex justify-center items-center space-x-6 mb-8">
+      <!-- Use proper icons for social links -->
+      <a href="https://x.com/GalacticBonk" aria-label="Twitter" target="_blank" rel="noopener">
+        <img src="assets/x_white.png" alt="X/Twitter icon" class="social-icon" />
+      </a>
+      <a href="https://t.me/GalacticBonk" aria-label="Telegram" target="_blank" rel="noopener">
+        <img src="assets/telegram.png" alt="Telegram icon" class="social-icon" />
+      </a>
       <!-- Link to the whitepaper for extra info -->
       <a href="whitepaper.html" class="bg-gbonkPink hover:bg-gbonkYellow text-cosmicNavy font-bold py-2 px-4 rounded-full transition-transform transform hover:scale-105 text-base">Whitepaper</a>
     </div>
