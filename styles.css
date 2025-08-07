@@ -108,24 +108,6 @@ header {
   filter: drop-shadow(0 0 4px var(--gbonkPink));
 }
 
-/* Decorative planet and sun icons in the hero section */
-#home .planet-icon, #home .sun-icon {
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-}
-#home .planet-icon {
-  bottom: 15%;
-  left: 5%;
-  width: 120px;
-  height: auto;
-}
-#home .sun-icon {
-  top: 10%;
-  right: 5%;
-  width: 140px;
-  height: auto;
-}
 
 /* Roadmap item styling: cosmic panels with subtle gradients */
 /* Roadmap cards: layer a starry texture over a dark gradient so each item feels like
