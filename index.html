@@ -42,10 +42,18 @@
       <!-- Hero / Home sectie -->
       <section id="home" class="section light">
         <div class="container hero">
-          <img
-            src="assets/hero-home.webp"
-            alt="Cartoon G‑Bonk dog walking through a futuristic blockchain landscape"
-          />
+          <!-- Replace static hero image with an autoplaying, looping video for a more interactive experience -->
+          <video
+            src="assets/hero-video.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            poster="assets/hero-home.webp"
+            style="width: 100%; height: auto; border-radius: var(--border-radius);"
+          >
+            Your browser does not support the video tag.
+          </video>
           <h1>Welcome to G‑Bonk</h1>
           <p>
             The newest memecoin on Solana. Playful, energetic and ready to
@@ -63,14 +71,14 @@
           <p>
             G‑Bonk is a Solana token. Instead of connecting a wallet, you can
             follow the current price and trade via external marketplaces.
-            Below you’ll find links to Dexscreener and DexTools where the
-            token is listed.
+            Below you’ll find links to Dexscreener, DexTools and Binance where
+            the token is listed.
           </p>
           <div class="dex-links">
             <!--
               The buttons below point directly to the G‑Bonk token pages on
-              Dexscreener and DexTools. This makes it easier for visitors to view
-              the current price and volume without having to search first.
+              Dexscreener, DexTools and Binance. This makes it easier for visitors
+              to view the current price and volume without having to search first.
             -->
             <a
               href="https://dexscreener.com/solana/ajdczxwien2fmtx3gdzea6yx34a6rzhqcczxsa7tqxj4"
@@ -87,6 +95,14 @@
               class="btn-secondary"
             >
               DexTools
+            </a>
+            <a
+              href="https://web3.binance.com/en/token/sol/AjdCzXwien2FmTx3GDZeA6YX34A6rzhQCCZXSa7tqXJ4"
+              target="_blank"
+              rel="noopener"
+              class="btn-secondary"
+            >
+              Binance
             </a>
           </div>
         </div>
@@ -190,6 +206,17 @@
                 <img src="assets/magnify.png" alt="Solscan search" class="social-icon" />
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners sectie -->
+      <section id="partners" class="section light">
+        <div class="container">
+          <h2>Partners</h2>
+          <!-- Display partner logos. Add more logos here as partnerships expand. -->
+          <div class="partners-logos">
+            <img src="assets/binance.png" alt="Binance logo" class="partner-logo" />
           </div>
         </div>
       </section>

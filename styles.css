@@ -399,6 +399,21 @@ nav li a:focus {
   height: 20px;
 }
 
+/* Styling for the partners section */
+.partners-logos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.partner-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
 /* Footer */
 footer {
   background-color: var(--color-surface);
